@@ -1,11 +1,13 @@
 #include "analyze.h"
 #include "algorithm.h"
 
+#define BILLION 1E9
+
 //
 // Private
 //
 
-struct timespec, start, stop;
+struct timespec start, stop;
 
 
 static void add_ordered(int *arr, int size)
@@ -37,7 +39,7 @@ static void add_random(int *arr, int size)
     }
 }
 
-static void generate_time_search(func_search funcpara, result *buf, int n, int key)
+static double generate_time_search(func_search funcpara, result_t *buf, int n, int key)
 {
 
     int *tmp_array = (int*)malloc(buf->size * sizeof(int));
@@ -46,7 +48,7 @@ static void generate_time_search(func_search funcpara, result *buf, int n, int k
 
     clock_gettime(CLOCK_MONOTONIC, &start);
 
-    bool funcpara(tmp_array, buf->size, key); 
+    bool test = funcpara(tmp_array, buf->size, key); 
 
     if (test)
     {
@@ -57,7 +59,7 @@ static void generate_time_search(func_search funcpara, result *buf, int n, int k
         printf("Value: %d was not found!\n", key);
     }
 
-    clock_gettime(CLOCK_MONOTONIC,, &stop);
+    clock_gettime(CLOCK_MONOTONIC, &stop);
 
     buf->time = (stop.tv_sec - start.tv_sec) + (stop.tv_nsec - start.tv_nsec) / BILLION;
 
@@ -65,7 +67,7 @@ static void generate_time_search(func_search funcpara, result *buf, int n, int k
 
 }
 
-static void generate_time_sort(func_sort funcpara, result_t *buf, int n, int option)
+static double generate_time_sort(func_sort funcpara, result_t *buf, int n, int option)
 {
 
     int *tmp_array = (int*)malloc(buf->size * sizeof(int));
@@ -91,7 +93,7 @@ static void generate_time_sort(func_sort funcpara, result_t *buf, int n, int opt
 
     funcpara(tmp_array, buf->size);
 
-    clock_gettime(CLOCK_MONOTONIC,, &stop);
+    clock_gettime(CLOCK_MONOTONIC, &stop);
 
     buf->time = (stop.tv_sec - start.tv_sec) + (stop.tv_nsec - start.tv_nsec) / BILLION;
 
@@ -104,7 +106,7 @@ static void generate_time_sort(func_sort funcpara, result_t *buf, int n, int opt
 //
 void benchmark(const algorithm_t a, const case_t c, result_t *buf, int n)
 {
-    srand(time(null));
+    srand(time(NULL));
 
     buf->time = SIZE_START;
 
@@ -117,8 +119,8 @@ void benchmark(const algorithm_t a, const case_t c, result_t *buf, int n)
         // used to store time and then the average time depending on number of ITERATIONS
         double time, avg_time, sum;
 
-            if(a == bubble_sort_t)
-            {
+        if(a == bubble_sort_t)
+        {
                 
             printf("BENCHMARKING BUBBLE SORT ALGORITHM!\n");
 
