@@ -63,6 +63,7 @@ static double generate_time_search(func_search funcpara, result_t *buf, int n, i
 
     buf->time = (stop.tv_sec - start.tv_sec) + (stop.tv_nsec - start.tv_nsec) / BILLION;
 
+    printf("TIME: %f", buf->time);
     return buf->time;
 
 }
@@ -173,7 +174,7 @@ void benchmark(const algorithm_t a, const case_t c, result_t *buf, int n)
                 arr = (int *)realloc(arr, buf->size * sizeof(int));
 
             }
-
+        }   
             // algorithm is insertion sort
             if(a == insertion_sort_t)
             {
@@ -279,7 +280,7 @@ void benchmark(const algorithm_t a, const case_t c, result_t *buf, int n)
             }    
 
             // algorithm is binary search
-            if(a == binary_search)
+            if(a == binary_search_t)
             {
 
                 printf("BENCHMARKING BINARY SEARCH ALGORITHM!\n");
@@ -297,7 +298,6 @@ void benchmark(const algorithm_t a, const case_t c, result_t *buf, int n)
                                 time = generate_time_search(binary_search, buf, n, 0);
                             break;
                             case 2:
-                                int num = rand() % buf->size;
                                 time = generate_time_search(binary_search, buf, n, rand() % buf->size);
                             break;
                         }
@@ -333,4 +333,4 @@ void benchmark(const algorithm_t a, const case_t c, result_t *buf, int n)
 
     }
 
-}
+
