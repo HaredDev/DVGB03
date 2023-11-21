@@ -71,10 +71,10 @@ int partition(int *a, int low, int high)
 		a[j] = tmp;
     }
   }
-  
+
   int tmp = a[i+1];
   a[i+1] = a[high];
-  a[high] tmp;
+  a[high] = tmp;
 
   return (i+1);
 
