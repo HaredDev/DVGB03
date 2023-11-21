@@ -111,7 +111,7 @@ void benchmark(const algorithm_t a, const case_t c, result_t *buf, int n)
 
     buf->time = SIZE_START;
 
-    int* arr = (int*)malloc(buf->size * sizeof(int));
+    int *arr = (int *)malloc(buf->size * sizeof(int));
 
     // algorithm is bubble sort
     if(arr)
