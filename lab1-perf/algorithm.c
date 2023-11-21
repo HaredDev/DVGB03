@@ -66,11 +66,15 @@ int partition(int *a, int low, int high)
     	{
       	//Increment index of smaller element
      	i++;
-      	swap(a[i],a[j]);
+		int tmp = a[i];
+		a[i] = a[j];
+		a[j] = tmp;
     }
   }
-
-  swap(a[i+1],a[high]);
+  
+  int tmp = a[i+1];
+  a[i+1] = a[high];
+  a[high] tmp;
 
   return (i+1);
 
