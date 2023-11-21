@@ -42,7 +42,7 @@ static void add_random(int *arr, int size)
 static double generate_time_search(func_search funcpara, result_t *buf, int n, int key)
 {
 
-    int *tmp_array = (int*)malloc(buf->size * sizeof(int));
+    int *tmp_array = (int *)malloc(buf->size * sizeof(int));
 
     add_ordered(tmp_array, buf->size);
 
@@ -56,7 +56,7 @@ static double generate_time_search(func_search funcpara, result_t *buf, int n, i
     }
     else
     {
-        printf("Value: %d was not found!\n", key);
+        //printf("Value: %d was not found!\n", key);
     }
 
     clock_gettime(CLOCK_MONOTONIC, &stop);
@@ -71,7 +71,7 @@ static double generate_time_search(func_search funcpara, result_t *buf, int n, i
 static double generate_time_sort(func_sort funcpara, result_t *buf, int n, int option)
 {
 
-    int *tmp_array = (int*)malloc(buf->size * sizeof(int));
+    int *tmp_array = (int *)malloc(buf->size * sizeof(int));
 
      if (option == 0)
     {
