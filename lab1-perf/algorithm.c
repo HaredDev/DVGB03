@@ -56,31 +56,23 @@ void insertion_sort(int *a, int n)
 
 int partition(int *a, int low, int high)
 {
-	int pivot = a[low];
-	int left = low;
-	for(int i = low+1; i < high; i++)
+	int pivot = a[high];
+	int i = (low-1);
+	
+	for(int j = low; j <= high; j++)
 	{
-		if(a[i] < pivot)
-		{
-			int tmp = a[left];
-			a[left] = a[i];
-			a[i] = tmp;
-			left += 1;
-		}
-	}
+    	//If current element is smaller than the pivot
+    	if(a[j]<pivot)
+    	{
+      	//Increment index of smaller element
+     	i++;
+      	swap(a[i],a[j]);
+    }
+  }
 
-	int pivotloc;
-	for(int i = 0; i < high; i++)
-	{
-		if(a[i] == pivot)
-			pivotloc = i;
-	}
+  swap(a[i+1],a[high]);
 
-	int tmp = a[left];
-	a[left] = pivot;
-	a[pivotloc] = tmp;
-
-	return left;
+  return (i+1);
 
 }
 
@@ -89,7 +81,7 @@ void quickSort(int *a, int low, int high)
 	if(low < high)
 	{
 		int pivot = partition(a, low, high);
-		quickSort(a, low, pivot);
+		quickSort(a, low, pivot-1);
 		quickSort(a, pivot+1, high);
 	}
 }
