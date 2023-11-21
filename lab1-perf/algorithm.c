@@ -9,6 +9,8 @@
 //
 void bubble_sort(int *a, int n)
 {
+
+	// bool isSorted = true; //the assumption is that the array is sorted
 	int sort = 1;
 
 	for(int i = 0; i < n-1; i++)

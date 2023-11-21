@@ -95,48 +95,67 @@ void ui_run()
 				break;
 			// Bubble sort
 			case 'c':
+				printf("\t\t\t\tBubble sort: best\t\t\t\t\nsize\t\ttime T(s)\t\tT/logn\t\tT(n)\t\tT/nLog\n¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n");
 				benchmark(bubble_sort_t, best_t, result, RESULT_ROWS);
 				break;
 			case 'd':
+				printf("\t\t\t\tBubble sort: worst\t\t\t\t\nsize\t\ttime T(s)\t\tT/logn\t\tT(n)\t\tT/nLog\n¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n");
 				benchmark(bubble_sort_t, worst_t, result, RESULT_ROWS);
 				break;
 			case 'e':
+				printf("\t\t\t\tBubble sort: average\t\t\t\t\nsize\t\ttime T(s)\t\tT/logn\t\tT(n)\t\tT/nLog\n¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n");
 				benchmark(bubble_sort_t, average_t, result, RESULT_ROWS);
 				break;
+			// Insertion sort
 			case 'f':
+				printf("\t\t\t\tInsertion sort: best\t\t\t\t\nsize\t\ttime T(s)\t\tT/logn\t\tT(n)\t\tT/nLog\n¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n");
 				benchmark(insertion_sort_t, best_t, result, RESULT_ROWS);
 				break;
 			case 'g':
+				printf("\t\t\t\tInsertion sort: worst\t\t\t\t\nsize\t\ttime T(s)\t\tT/logn\t\tT(n)\t\tT/nLog\n¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n");
 				benchmark(insertion_sort_t, worst_t, result, RESULT_ROWS);
 				break;
 			case 'h':
+				printf("\t\t\t\tInsertion sort: average\t\t\t\t\nsize\t\ttime T(s)\t\tT/logn\t\tT(n)\t\tT/nLog\n¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n");
 				benchmark(insertion_sort_t, average_t, result, RESULT_ROWS);
 				break;
+			// Quick sort
 			case 'i':
+				printf("\t\t\t\tQuick sort: best\t\t\t\t\nsize\t\ttime T(s)\t\tT/logn\t\tT(n)\t\tT/nLog\n¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n");
 				benchmark(quick_sort_t, best_t, result, RESULT_ROWS);
 				break;
 			case 'j':
+				printf("\t\t\t\tQuick sort: worst\t\t\t\t\nsize\t\ttime T(s)\t\tT/logn\t\tT(n)\t\tT/nLog\n¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n");
 				benchmark(quick_sort_t, worst_t, result, RESULT_ROWS);
 				break;
 			case 'k':
+				printf("\t\t\t\tQuick sort: average\t\t\t\t\nsize\t\ttime T(s)\t\tT/logn\t\tT(n)\t\tT/nLog\n¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n");
 				benchmark(quick_sort_t, average_t, result, RESULT_ROWS);
 				break;
+			// Linear search
 			case 'l':
+				printf("\t\t\t\tLinear search: best\t\t\t\t\nsize\t\ttime T(s)\t\tT/logn\t\tT(n)\t\tT/nLog\n¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n");
 				benchmark(linear_search_t, best_t, result, RESULT_ROWS);
 				break;
 			case 'm':
+				printf("\t\t\t\tLinear search: worst\t\t\t\t\nsize\t\ttime T(s)\t\tT/logn\t\tT(n)\t\tT/nLog\n¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n");
 				benchmark(linear_search_t, worst_t, result, RESULT_ROWS);
 				break;
 			case 'n':
+				printf("\t\t\t\tLinear search: average\t\t\t\t\nsize\t\ttime T(s)\t\tT/logn\t\tT(n)\t\tT/nLog\n¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n");
 				benchmark(linear_search_t, average_t, result, RESULT_ROWS);
 				break;
+			// Binary search
 			case 'o':
+				printf("\t\t\t\tBinary search: best\t\t\t\t\nsize\t\ttime T(s)\t\tT/logn\t\tT(n)\t\tT/nLog\n¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n");
 				benchmark(binary_search_t, best_t, result, RESULT_ROWS);
 				break;
 			case 'p':
+				printf("\t\t\t\tBinary search: worst\t\t\t\t\nsize\t\ttime T(s)\t\tT/logn\t\tT(n)\t\tT/nLog\n¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n");
 				benchmark(binary_search_t, worst_t, result, RESULT_ROWS);
 				break;
 			case 'q':
+				printf("\t\t\t\tBinary search: average\t\t\t\t\nsize\t\ttime T(s)\t\tT/logn\t\tT(n)\t\tT/nLog\n¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n");
 				benchmark(binary_search_t, average_t, result, RESULT_ROWS);
 				break;
 			// Invalid input
